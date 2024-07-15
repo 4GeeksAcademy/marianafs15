@@ -1,7 +1,5 @@
 const path = require('path');
 
-const PrettierPlugin = require("./_utils/prettier.js");
-const cleanStack = require("./_utils/clean-stack.js");
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const WebpackErrorReporting = require('bc-webpack-error-reporting-plugin');
@@ -73,9 +71,6 @@ module.exports = {
     new HtmlWebpackPlugin({
         filename: "index.html",
         template: "src/index.html"
-    }),
-    new PrettierPlugin({
-        failSilently: true
-    }),
+    })
   ]
 };
